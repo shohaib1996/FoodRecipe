@@ -28,7 +28,7 @@ import {
     );
     console.log('favoriteRecipe from custom',favoriteRecipe);
     
-    const isFavourite = favoriteRecipe.includes(recipe.idCategory); // Adjust this according to your recipe structure
+    const isFavourite = favoriteRecipe.some(fav => fav.title === recipe.title && fav.image === recipe.image);
   
     if (!recipe) {
       return (
